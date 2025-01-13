@@ -1,0 +1,344 @@
+/* style for section Origami */
+
+body {
+	background-color: #E8F0F0;  /*#F0F0E8;*/
+	color: #101010; 
+}
+
+a:link { 
+	color:#B05030;  /* #C05030; #101090, #D03030; #B05040;  #C04030; #D03030; */
+	text-decoration:none;
+}	
+
+a:visited { 	
+	color:#806050;  	/* #A08070; #600080; */
+	text-decoration:none;
+}
+
+h1 {
+	font-family: Verdana;
+	font-size: 28;
+}
+
+h2 {
+	font-family: Verdana;
+	font-size: 24;
+}
+
+h3 {
+  font-family: Verdana;
+  font-size: 16;
+	font-weight:bold;
+	line-height: 1.375;
+}
+
+.pageCenter {
+  /*align: center;*/
+}
+
+.navBtns {
+	font-family: Verdana;
+	font-size: 10;
+}
+
+.pageMainBlock {
+  width: 800;
+	font-family: Verdana;
+	font-size: 13;
+}
+
+.pageContentBlock {
+	width: 720;
+}
+
+.innerContentBlock {
+	width: 640;
+}
+
+.itemTitle {
+  font-family: Verdana;
+  font-size: 16;
+	font-weight:bold;
+	line-height: 1.375
+}
+
+.bodyCopy {
+  font-family: Verdana;
+  font-size: 13;
+	line-height: 1.375
+}
+
+.imgCaption {
+  font-family: Verdana;
+  font-size: 10;
+	line-height: 1.375
+}
+
+.photoCredit {
+	color:#a0a0a0;
+	font-family: Verdana;
+	font-size: 10;
+	font-style:italic;
+	padding-top: 3;
+	align: left;
+}
+
+.buyNowBlock {
+	background-color: #F0B040;  /* #70C050;  #F08040; */
+	color: #A02020;  /* #D07050; */
+	padding:4;
+	font-family: Verdana;
+	font-size: 24;
+	font-weight:bold;
+	align: center; 
+	border:solid;
+	border-color: #A08070; 
+	border-width: 1;
+}
+
+.buyNowBlock2 {
+	background-color: #F0B040;  /* #70C050;  #F08040; */
+	color: #A02020;  /* #D07050; */
+	padding:3;
+	font-family: Verdana;
+	font-size: 20;
+	font-weight:bold;
+	align: center;
+	border:solid;
+	border-color: #A08070; 
+	border-width: 1;
+}
+
+/*  lightbox styles  -----------------------------------------------------*/
+
+/* Preload images */
+body:after {
+  content: url(/web/20171229223517im_/http://www.zingman.com/styles/images/close.png) url(/web/20171229223517im_/http://www.zingman.com/styles/images/loading.gif) url(/web/20171229223517im_/http://www.zingman.com/styles/images/prev.png) url(/web/20171229223517im_/http://www.zingman.com/styles/images/next.png);
+  display: none;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);  /*(Opacity=80);*/
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-container {
+  padding: 4px;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(/web/20171229223517im_/http://www.zingman.com/styles/images/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(/web/20171229223517im_/http://www.zingman.com/styles/images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(/web/20171229223517im_/http://www.zingman.com/styles/images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(/web/20171229223517im_/http://www.zingman.com/styles/images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/*
+     FILE ARCHIVED ON 22:35:17 Dec 29, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:56:34 Jan 13, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1.049
+  exclusion.robots: 0.039
+  exclusion.robots.policy: 0.024
+  esindex: 0.017
+  cdx.remote: 102.377
+  LoadShardBlock: 467.013 (3)
+  PetaboxLoader3.datanode: 301.021 (5)
+  PetaboxLoader3.resolve: 507.766 (3)
+  load_resource: 567.966 (2)
+*/
